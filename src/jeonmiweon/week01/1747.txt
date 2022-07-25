@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int[] numbers = new int[1000001];
+        numbers[0] = numbers[1] = 1;
+        for(int i = 2; i <= Math.sqrt(1000000); i++) {
+            for(int j = 2*i; j <= 1000000; j += i) {
+                numbers[j]++;
+            }
+        }
+        
+        int count = 0;
+        for(int i = 2; i <= 1000000; i++) {
+            if(numbers[i] == 0)    count++;
+        }
+        
+        int[] prime = new int[count];
+        int pos = 0;
+        for(int i = 2; i <= 1000000; i++) {
+            if(numbers[i] == 0)    {prime[pos++] = i;}
+        }
+        
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        
+        for(int i = 0; i < count; i++) {
+            if(prime[i] >= num) {
+                String str = Integer.toString(prime[i]);
+                char[] arr = str.toCharArray();
+                char[] reversedArr = new char[arr.length];
+                for(int j = 0; j < arr.length; j++) {
+                    reversedArr[arr.length-1-j] = arr[j];
+                }
+                String reversedString = new String(reversedArr);
+                if(str.equals(reversedString)) {
+                    System.out.println(prime[i]);
+                    return;
+                }
+            }
+        }
+    }
+}
