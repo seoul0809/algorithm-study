@@ -16,6 +16,11 @@
 - 그 외 공유하고 싶은 문제, 풀리지 않은 문제가 있다면 스터디 시간에 함께 학습
 
 ## :date: 일정
+[8 월 1 주차] Collection (List, Map, Set)
+[8 월 2 주차] 기본 자료구조(Array, Stack, Queue)
+[8 월 3 주차] LinkedList, Tree, 완전탐색
+[8 월 4 주차] 탐욕 알고리즘/분할정복, 백트래킹
+[8 월 5 주차] 그래프, BFS/DFS
 
 ## :pushpin: Github 진행 방식
 
