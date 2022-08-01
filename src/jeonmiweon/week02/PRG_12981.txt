@@ -1,0 +1,26 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(int n, String[] words) {
+
+        List<String> list = new ArrayList<>();
+        list.add(words[0]);
+        
+        for(int i = 1; i < words.length; i++) {
+            String word = words[i - 1];
+            if(list.contains(words[i])) { 
+                int[] result = {i%n+1, i/n+1};
+                return result; 
+            }
+            list.add(words[i]);
+            
+            int len = word.length() - 1;
+            if(word.charAt(len) != words[i].charAt(0)) {
+                int[] result = {i%n+1, i/n+1};
+                return result;
+            }
+        }
+        int[] result = {0,0};
+        return result;
+    }
+}
