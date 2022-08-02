@@ -1,6 +1,7 @@
 package week3;
 
 import java.util.Scanner;
+import java.math.BigInteger;
 // 하노이의 탑
 public class boj_1914 {
 
@@ -9,9 +10,14 @@ public class boj_1914 {
 		Scanner sc = new Scanner(System.in);
 		int num = sc.nextInt();
 		
-		System.out.println((int)Math.pow(2, num) - 1);
-		if(num > 20)	return;
+		if(num > 20) {
+			BigInteger one = new BigInteger("1");
+			BigInteger bigNum = new BigInteger("2").pow(num);
+			System.out.println(bigNum.subtract(one));
+			return;
+		}
 		
+		System.out.println((int)Math.pow(2, num) - 1);
 		hanoi(num, 1, 3, 2);
 	}
 
