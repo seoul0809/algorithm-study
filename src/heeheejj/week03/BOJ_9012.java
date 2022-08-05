@@ -1,4 +1,4 @@
-package heeheejj.boj;
+﻿package heeheejj.boj;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -35,9 +35,9 @@ public class BOJ_9012 {
         }
 
         // 문자 배열을 모두 확인하고 나서
-        if(stack.empty()){  // 스택이 비어있다면 VPS가 맞다.
+        if(stack.empty()){	 // 스택이 비어있다면 VPS가 맞다.
             return "YES";
-        }else{              // 스택이 비어있지 않다면 VPS가 아니다.
+        }else{		// 스택이 비어있지 않다면 VPS가 아니다.
             return "NO";
         }
     }
