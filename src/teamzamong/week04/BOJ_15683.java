@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 
 /*
 	BOJ 15683: 감시
-	https://www.acmicpc.net/submit/15683/47650719
+	https://www.acmicpc.net/problem/15683
 	걸린 시간: 260ms
 	
 	문제)
