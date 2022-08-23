@@ -1,5 +1,3 @@
-package week06;
-
 import java.util.*;
 import java.io.*;
 
@@ -17,7 +15,7 @@ import java.io.*;
 	(N,N)에 도착했을 때 종료 및 개수 업데이트	
  */
 
-public class Main_17070_파이프옮기기1 {
+public class BOJ_17070 {
 
 	static int N, count;
 	static int[][] map;
