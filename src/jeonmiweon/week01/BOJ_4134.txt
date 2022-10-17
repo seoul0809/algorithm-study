@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int test_case = sc.nextInt();
+        
+        int[] numbers = new int[4000000000L];
+        numbers[0] = numbers[1] = 1;
+        for(int i = 2; i <= Math.sqrt(4000000000L); i++) {
+            for(long j = 2*i; j < 4000000000L; j += i)
+                numbers[j]++;
+        }
+        
+        int count = 0;
+        for(int i = 2; i < 4000000000L; i++) {
+            if(numbers[i] == 0)    count++;
+        }
+        int[] prime = new int[count];
+        int pos = 0;
+        for(long i = 2; i < 4000000000L; i++) {
+            if(numbers[i] == 0)    prime[pos++] = i;
+        }
+        
+        for(int i = 1; i <= test_case; i++) {
+            int num = sc.nextInt();
+            int flag = 0;
+            for(int j = 0; j < count; j++) {
+                if(prime[j] >= num) {
+                    flag++;
+                    System.out.println(prime[j]);
+                    break;
+                }
+            }
+            if(flag > 0)    continue;
+        }
+    }
+}
